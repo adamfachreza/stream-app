@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->date('end_of_subscription');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

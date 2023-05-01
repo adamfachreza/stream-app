@@ -20,6 +20,7 @@ return new class extends Migration
             $table->boolean('is_download');
             $table->boolean('is_4k');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
