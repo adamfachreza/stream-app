@@ -1,7 +1,7 @@
 @extends('admin.layouts.base');
 
 @section('title', 'Movies');
-  
+
 @section('content')
   <div class="row">
     <div class="col-md-12">
@@ -9,7 +9,7 @@
         <div class="card-header">
           <h3 class="card-title">Movies</h3>
         </div>
-        
+
         <div class="card-body">
           <div class="row">
             <div class="col-md-12">

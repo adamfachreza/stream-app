@@ -63,10 +63,18 @@
           <div class="form-group">
             <label for="small-thumbnail">Small Thumbnail</label>
             <input type="file" class="form-control" name="small_thumbnail">
+            @if ($movie->small_thumbnail)
+              <br>
+              <img src="{{ asset('storage/thumbnail/'.$movie->small_thumbnail) }}" alt="{{ $movie->title }}" height="150">
+            @endif
           </div>
           <div class="form-group">
             <label for="large-thumbnail">Large Thumbnail</label>
             <input type="file" class="form-control" name="large_thumbnail">
+            @if ($movie->large_thumbnail)
+              <br>
+              <img src="{{ asset('storage/thumbnail/'.$movie->large_thumbnail) }}" alt="{{ $movie->title }}" height="150">
+            @endif
           </div>
           <div class="form-group">
             <label for="short-about">Short About</label>
