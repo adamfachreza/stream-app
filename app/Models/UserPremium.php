@@ -17,4 +17,9 @@ class UserPremium extends Model
         'user_id',
         'end_of_subscription'
     ];
+
+    public function package()
+    {
+        return $this->belongsTo(Package::class);
+    }
 }

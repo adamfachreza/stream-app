@@ -22,17 +22,15 @@ class WebhookController extends Controller
 
         $status = '';
 
-        if($transactionStatus == 'capture'){
-            if($fraudStatus == 'challenge'){
+        if ($transactionStatus == 'capture'){
+            if ($fraudStatus == 'challenge'){
                 $status = 'challenge';
-            }else if($fraudStatus == 'accept'){
+            } else if ($fraudStatus == 'accept'){
                 $status = 'success';
             }
-        }else if($transactionStatus == 'settlement')
-        {
+        } else if ($transactionStatus == 'settlement'){
             $status = 'success';
-        }
-        else if ($transactionStatus == 'cancel' ||
+        } else if ($transactionStatus == 'cancel' ||
           $transactionStatus == 'deny' ||
           $transactionStatus == 'expire'){
           $status = 'failure';
@@ -66,7 +64,6 @@ class WebhookController extends Controller
                 ]);
             }
         }
-
         $transaction->update(['status' => $status]);
     }
 }

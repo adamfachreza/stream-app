@@ -17,7 +17,8 @@
                 <div class="progress bg-[#22C58B] w-[113px] h-full rounded-full"></div>
             </div>
             <div class="text-stream-gray text-sm">
-                11 / 30 days
+                11 /
+                {{$user_premium->package->max_days}} Days
             </div>
         </div>
     </div>
@@ -54,8 +55,8 @@
     <form method="post" action="{{ route('member.transaction.store') }}">
         @csrf
         <input type="hidden" name="package_id" value="{{ $user_premium->package_id }}">
-        <button 
-            type="submit" 
+        <button
+            type="submit"
             class="py-[13px] px-[58px] bg-[#5138ED] rounded-full text-center">
             <span class="text-white font-semibold text-base">
                 Make a Renewal
@@ -84,7 +85,7 @@
     <form method="post" action="{{ route('member.user_premium.destroy', $user_premium->id) }}">
         @csrf
         @method('delete')
-        <button 
+        <button
             type="submit"
             class="px-[19px] py-[13px] bg-[#FE4848] rounded-full text-center">
             <span class="text-white font-semibold text-base">
