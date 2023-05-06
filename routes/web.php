@@ -54,6 +54,9 @@ Route::post('/register', [RegisterController::class, 'store'])->name('member.reg
 Route::get('/login', [MemberLoginController::class, 'index'])->name('member.login');
 Route::post('/login', [MemberLoginController::class, 'auth'])->name('member.login.auth');
 
+Route::get('/sign-in-google',[MemberLoginController::class,'google'])->name('signin-google');
+Route::get('/auth/google/callback',[MemberLoginController::class,'handleProviderCallbackGoogle'])->name('member.google.callback');
+
 Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
 
 Route::view('/payment-finish', 'member.payment-finish')->name('member.payment.finish');

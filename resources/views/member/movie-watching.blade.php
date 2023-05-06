@@ -22,7 +22,8 @@
 
     <section class="mx-auto w-screen relative watching-page font-poppins" id="stream">
         <video-js id="stream-video" class="overflow-hidden h-screen w-screen">
-            <source src="{{ $movie->movie }}" type="video/mp4" />
+            {{-- <source src="{{ $movie->movie }}" type="video/mp4" /> --}}
+                <source src="{{asset('stream/vidio/Ethan DeRose - Still on Your Mind (Acoustic).mp4')}}" type="video/mp4" />
             <p class="vjs-no-js text-twmdark">
                 To view this video please enable JavaScript, and consider upgrading to a
                 web browser that

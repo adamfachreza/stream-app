@@ -80,6 +80,14 @@
                             <button type="submit" class="bg-indigo-600 rounded-full py-3 mt-4 text-center">
                                 <span class="font-semibold text-white text-base">Continue</span>
                             </button>
+                            {{-- <a href="{{ route('signin-google') }}"
+                                class="py-[13px] px-[58px] outline outline-1 outline-stream-gray outline-offset-[-3px] rounded-full text-center">
+                                <img src="{{ asset('stream/assets/images/ic_google.svg')}}"> Sign In with Google
+                            </a> --}}
+                            <a href="{{ route('signin-google') }}"
+                            class="px-8 py-3 mt-3 text-center outline outline-2 outline-stream-gray rounded-3xl lg:mt-0">
+                            <span class="text-base text-normal text-stream-gray">Sign In With Google</span>
+                        </a>
                         </form>
                     </section>
                 </div>

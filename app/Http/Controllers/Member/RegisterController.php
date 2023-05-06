@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
+
 class RegisterController extends Controller
 {
     public function index()
@@ -32,12 +33,12 @@ class RegisterController extends Controller
                 'email' => 'This Email Already Exist'
             ])->withInput();
         }
-
-        $data['role'] = 'member';
         $data['password'] = Hash::make($request->password);
 
         User::create($data);
 
         return redirect()->route('member.login');
     }
+
+
 }
