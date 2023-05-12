@@ -84,10 +84,10 @@
                                 class="py-[13px] px-[58px] outline outline-1 outline-stream-gray outline-offset-[-3px] rounded-full text-center">
                                 <img src="{{ asset('stream/assets/images/ic_google.svg')}}"> Sign In with Google
                             </a> --}}
-                            <a href="{{ route('signin-google') }}"
-                            class="px-8 py-3 mt-3 text-center outline outline-2 outline-stream-gray rounded-3xl lg:mt-0">
-                            <span class="text-base text-normal text-stream-gray">Sign In With Google</span>
-                        </a>
+                            <a href="{{ route('signin-google') }}" class="flex px-8 py-3 mt-3 text-center outline outline-2 outline-stream-gray rounded-3xl lg:mt-0">
+                                <img src="{{ asset('stream/assets/images/ic_google.svg') }}" alt="" class="mr-16">
+                                <span class="font-semibold text-black text-base flex justify-center items-center">Sign In With Google</span>
+                            </a>
                         </form>
                     </section>
                 </div>

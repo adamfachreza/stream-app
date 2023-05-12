@@ -17,8 +17,13 @@ class UserPremiumController extends Controller
         if(!$userPremium){
             return redirect()->route('pricing');
         }
+        $endOfSubscription = Carbon::parse($userPremium->end_of_subscription);
+        $now = Carbon::now();
 
-        return view('member.subscription',['user_premium' => $userPremium]);
+        $daysLeft = $endOfSubscription->diffInDays($now);
+        $daysLeftPercentage = ($daysLeft / $userPremium->package->max_days) * 100;
+
+        return view('member.subscription',['user_premium' => $userPremium,'daysLeft' => $daysLeft,'days_left_percentage' => $daysLeftPercentage]);
     }
 
     public function destroy($id)

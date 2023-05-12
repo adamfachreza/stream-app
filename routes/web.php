@@ -8,8 +8,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Member\RegisterController;
 use App\Http\Controllers\Member\LoginController as MemberLoginController;
 use App\Http\Controllers\Member\DashboardController;
+use App\Http\Controllers\Member\FavoriteController;
 use App\Http\Controllers\Member\MovieController as MemberMovieController;
 use App\Http\Controllers\Member\PricingController;
+use App\Http\Controllers\Member\SettingController;
 use App\Http\Controllers\Member\TransactionController as MemberTransactionController;
 use App\Http\Controllers\Member\UserPremiumController;
 
@@ -66,6 +68,8 @@ Route::group(['prefix' => 'member', 'middleware' => ['auth']], function() {
 
     Route::get('/logout', [MemberLoginController::class, 'logout'])->name('member.logout');
 
+    Route::get('favorite', [FavoriteController::class, 'index'])->name('member.favorite');
+
     Route::post('transaction', [MemberTransactionController::class, 'store'])->name('member.transaction.store');
 
     Route::get('subscription', [UserPremiumController::class, 'index'])->name('member.user_premium.index');
@@ -73,4 +77,9 @@ Route::group(['prefix' => 'member', 'middleware' => ['auth']], function() {
 
     Route::get('movie/{id}', [MemberMovieController::class, 'show'])->name('member.movie.detail');
     Route::get('movie/{id}/watch', [MemberMovieController::class, 'watch'])->name('member.movie.watch');
+
+    Route::get('setting', [SettingController::class,'edit'])->name('member.setting');
+    Route::put('update', [SettingController::class, 'update'])->name('member.update');
+
+    Route::view('/gift', 'member.gift')->name('member.gift');
 });

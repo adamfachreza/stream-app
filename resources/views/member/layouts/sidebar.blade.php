@@ -30,7 +30,7 @@
                 </svg>
                 Discover
             </a>
-            <a href="!#" class="side-link">
+            <a href="{{ route('member.favorite')}}" class="side-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -38,8 +38,6 @@
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 My Favorites
-                <span
-                    class="bg-[#6EC2DF] text-[#1E5062] text-base rounded-full font-semibold text-center px-[7px] py-[1px]">6</span>
             </a>
             <a href="!#" class="side-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -52,7 +50,7 @@
                 </svg>
                 Playlist
             </a>
-            <a href="!#" class="side-link">
+            <a href="{{ route('member.gift')}}" class="side-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 12V22H4V12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -80,7 +78,7 @@
                 </svg>
                 Subscription
             </a>
-            <a href="!#" class="side-link">
+            <a href="{{ route('member.setting') }}" class="side-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path

@@ -31,11 +31,20 @@
                 </p>
             </div>
             <div class="inline-flex items-center gap-[6px]">
-                <img src="{{ asset('stream(assets/images/ic_star.svg') }}" alt="">
-                <img src="{{ asset('stream(assets/images/ic_star.svg') }}" alt="">
-                <img src="{{ asset('stream(assets/images/ic_star.svg') }}" alt="">
-                <img src="{{ asset('stream(assets/images/ic_star.svg') }}" alt="">
-                <img src="{{ asset('stream(assets/images/ic_star.svg') }}" alt="">
+                <a href="#">
+                    <img src="{{ asset('stream/assets/images/like-18.svg') }}" alt="Like">a
+                </a>
+                <a href="#">
+                    <img src="{{ asset('stream/assets/images/ic_star.svg') }}" alt="Download">
+                </a>
+            </div>
+
+            <div class="inline-flex items-center gap-[6px]">
+                <img src="{{ asset('stream/assets/images/ic_star.svg') }}" alt="">
+                <img src="{{ asset('stream/assets/images/ic_star.svg') }}" alt="">
+                <img src="{{ asset('stream/assets/images/ic_star.svg') }}" alt="">
+                <img src="{{ asset('stream/assets/images/ic_star.svg') }}" alt="">
+                <img src="{{ asset('stream/assets/images/ic_star.svg') }}" alt="">
                 <div class="text-base text-white ml-[6px] mt-1">
                     18,049
                 </div>

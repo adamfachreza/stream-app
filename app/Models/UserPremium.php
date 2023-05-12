@@ -22,4 +22,9 @@ class UserPremium extends Model
     {
         return $this->belongsTo(Package::class);
     }
+
+    public function getMaxActiveUsers()
+{
+    return $this->package->max_users;
+}
 }

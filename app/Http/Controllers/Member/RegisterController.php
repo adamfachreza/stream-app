@@ -34,9 +34,11 @@ class RegisterController extends Controller
             ])->withInput();
         }
         $data['password'] = Hash::make($request->password);
+        $data['avatar'] = 'storage/avatar/user.jpeg';
 
         User::create($data);
 
+        // dd($data);
         return redirect()->route('member.login');
     }
 

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('avatar')->nullable();
             $table->enum('role', ['admin','member'])->default('member');
+            $table->boolean('is_logged_in')->default(false);;
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

@@ -14,11 +14,11 @@
         </div>
         <div class="flex items-center gap-[10px]">
             <div class="progress-bar w-[248px] h-[6px] bg-softpur rounded-full">
-                <div class="progress bg-[#22C58B] w-[113px] h-full rounded-full"></div>
+                <div class="progress bg-[#22C58B]" style="width:{{ $days_left_percentage }}%; height: 6px; border-radius: 9999px;"></div>
             </div>
+
             <div class="text-stream-gray text-sm">
-                11 /
-                {{$user_premium->package->max_days}} Days
+                {{ $daysLeft }} day left
             </div>
         </div>
     </div>
